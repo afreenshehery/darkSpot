@@ -1,0 +1,22 @@
+body {
+    background-color: transparent;
+}
+
+.btn1 {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -250px;
+    right: 310px;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: transparent;
+    border: transparent;
+}
+
+.abx {
+    margin-top: 100px;
+    align-items: center;
+}
+
+

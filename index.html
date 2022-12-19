@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dark spot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="btn.css">
+
+
+    <script type="text/javascript">
+        window.addEventListener('load', function (event) {
+            document.querySelectorAll(".inlineVideo").forEach((el) => {
+                el.onplay = function (e) {
+                    // pause all the videos except the current.
+                    document.querySelectorAll(".inlineVideo").forEach((el1) => {
+                        if (el === el1)
+                            el1.play();
+                        else
+                            el1.pause();
+                        el1.currentTime = 0;
+
+                    });
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+
+
+    <div class="row  ">
+        <div class="col-12 ">
+            <div class="row abx text-center">
+                <div class="col-6 abc text-center">
+                    <video id="my-video1" width="300px" class="text-center vdo5 inlineVideo" autoplay loop>
+                        <source src="img/vdo.mp4">
+                    </video>
+                    <div class="video-controls-bar1 btn">
+                        <button class="btn1 fadetoo bt5" id="playPausebtn1"
+                            onclick="playPause1(this ,'my-video1')"></button>
+                    </div>
+
+
+                </div>
+                <div class="col-6  text-center">
+                    <video id="my-video2" width="300px" class="text-center vdo2 inlineVideo" autoplay loop>
+                        <source src="img/vdo.mp4">
+                    </video>
+                    <div class="video-controls-bar2 btn">
+                        <button class="btn1 fadetoo bt5" id="playPausebtn2"
+                            onclick="playPause2(this ,'my-video2')"></button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <script>
+            function playPause1(btn, vid) {
+                var vid = document.getElementById(vid);
+                if (vid.paused) {
+                    vid.play();
+                    btn.innerHTML = "";
+                } else {
+                    vid.pause();
+                    btn.innerHTML = "";
+                }
+            }
+
+            function playPause2(btn, vid) {
+                var vid = document.getElementById(vid);
+                if (vid.paused) {
+                    vid.play();
+                    vid.reload();
+
+                    btn.innerHTML = "";
+                } else {
+                    vid.pause();
+                    btn.innerHTML = "";
+                }
+            }
+
+            function playPause3(btn, vid) {
+                var vid = document.getElementById(vid);
+                if (vid.paused) {
+                    vid.play();
+                    btn.innerHTML = "";
+                } else {
+                    vid.pause();
+                    btn.innerHTML = "";
+                }
+            }
+
+
+        </script>
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
